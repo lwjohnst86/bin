@@ -1,0 +1,24 @@
+#!/bin/sh
+
+# This script was created November 10, 2013 by Luke Johnston to backup
+# all folders and files, to be run whenever needed or remembered.  Run
+# 'sudo su' before execution.
+
+# Script variables
+DATE=$(date +"%F") # The %F stands for YYYY-MM-DD
+OUTDIR="/media/FreeAgent GoFlex Drive/backup/fulldisk"
+
+# Running tar
+tar cvpzf "$OUTDIR"/discBackup-$DATE.tgz \
+    --exclude="home/luke/Ubuntu\ One" \
+    --exclude=sys \
+    --exclude=mnt \
+    --exclude=lost+found \
+    --exclude=proc \
+    --exclude=home/luke/Dropbox \
+    --exclude=home/luke/.local/share/Trash \
+    --exclude=home/luke/.thunderbird/0atvmpgk.default/ImapMail \
+    --exclude=media \
+    --exclude=home/luke/.cache \
+    --exclude=$OUTDIR/discBackup-$DATE.tgz \
+    /

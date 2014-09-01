@@ -1,0 +1,30 @@
+#!/bin/sh
+
+# This script was created August 8, 2013 by Luke Johnston to backup
+# folders which are used for work (i.e. SAS, R, bin, .emacs.d, and Documents)
+# on a weekly basis using crontab (a symlink is put in cron.weekly)
+
+# Updated on 2014-04-21 by Luke. Removed references to Ubuntu One, as it will
+# be discontinued.
+
+# Script variables
+DATE=$(date +"%F") # The %F stands for YYYY-MM-DD
+OUTDIR=/home/luke/Dropbox/Luke/backups
+
+# Running tar
+cd /home/luke/
+tar cvpzf $OUTDIR/workBackup-$DATE.tgz \
+    --exclude=bin/anaconda \
+    --exclude=bin/jdk \
+    --exclude=bin/docear \
+    SAS \
+    Documents \
+    .emacs.d \
+    bin \
+    R \
+    Templates \
+    Anki
+
+# Delete all older backups
+find $OUTDIR/workBackup* -mtime +22 -delete
+

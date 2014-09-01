@@ -1,0 +1,36 @@
+#!/bin/sh
+
+# This script was created August 12, 2013 by Luke Johnston to backup
+# all home folders and files, but not including folders backed up by the
+# script "backup-work" (i.e. Documents, SAS, and R). Backups occur
+# on a monthly basis using crontab (a symlink is put in cron.monthly)
+
+# Updated on 2014-04-21 by Luke to remove moving backups to Ubuntu One,
+# as the service will no longer be provided.
+
+# Script variables
+DATE=$(date +"%F") # The %F stands for YYYY-MM-DD
+OUTDIR=/home/luke/Dropbox/Luke/backups
+
+# Running tar
+cd /home/
+tar cvpzf $OUTDIR/homeBackup-$DATE.tgz \
+    --exclude=luke/"Ubuntu One" \
+    --exclude=luke/Music \
+    --exclude=luke/Downloads \
+    --exclude=luke/Dropbox \
+    --exclude=luke/.local/share/Trash \
+    --exclude=luke/Documents \
+    --exclude=luke/SAS \
+    --exclude=luke/R \
+    --exclude=luke/bin/anaconda \
+    --exclude=luke/.thunderbird/0atvmpgk.default/ImapMail \
+    --exclude=luke/.cache \
+    --exclude=luke/.cabal \
+    --exclude=luke/.wine \
+    --exclude=luke/.mozilla/firefox/8gv8alpt.default/zotero \
+    luke/
+
+# Delete all backups older than two months (62 days)
+find $OUTDIR/homeBackup* -mtime +62 -delete
+
