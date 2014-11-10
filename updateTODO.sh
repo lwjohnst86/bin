@@ -11,12 +11,11 @@
 date=$(date +"%F")
 outdir=~/org
 origtodo="
+/home/luke/Documents/research-projects/nefaDiabetes/TODO.org
 /home/luke/Documents/datasets/PROMISE/TODO.org
 /home/luke/SAS/TODO.org
 /home/luke/Documents/graduate/phd/duties/nsgsa/TODO.org
 /home/luke/bin/prodigen/TODO.org
-/home/luke/Documents/research-projects/sfaDiabetes/TODO.org
-/home/luke/Documents/research-projects/renalProg/TODO.org
 
 "
 
