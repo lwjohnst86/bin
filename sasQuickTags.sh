@@ -31,8 +31,8 @@ $(cat $1)" > $1
 elif [[ "$*" != "--header" ]]
 then
     echo Replacing quick tags with real code
-    sed -i -e 's/{{\(.*\)}}/<code>\1<\/code>/g' \
-        -e 's/\[\(.*\)\]/<b>\1<\/b>/g' \
+    sed -i -e 's/{{\(\w.*\)}}/<code>\1<\/code>/g' \
+        -e 's/\[\(\w.*\)\]/<b>\1<\/b>/g' \
         -e 's/\\\\$/<p>/g' \
         -e 's/{{{/<code>/g' \
         -e 's/}}}/<\/code>/g' \
