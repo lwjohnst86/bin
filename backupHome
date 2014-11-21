@@ -22,8 +22,8 @@ tar cvpzf $OUTDIR/homeBackup-$DATE.tgz \
     --exclude=luke/.local/share/Trash \
     --exclude=luke/Documents \
     --exclude=luke/SAS \
+    --exclude=luke/.PlayOnLinux \
     --exclude=luke/R \
-    --exclude=luke/bin/anaconda \
     --exclude=luke/.thunderbird/0atvmpgk.default/ImapMail \
     --exclude=luke/.cache \
     --exclude=luke/.cabal \
