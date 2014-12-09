@@ -2,6 +2,8 @@ create a shell script to upate R packages, emacs packages, pandoc, latex
 
 Apps to install:
 
+Ruby (For GH-pages)
+Bundler (For Github Pages)
 DocItOut
 Dia
 Latex (beamer)
