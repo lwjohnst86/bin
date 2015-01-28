@@ -15,20 +15,25 @@ OUTDIR=/home/luke/Dropbox/Luke/backups
 # Running tar
 cd /home/
 tar cvpzf $OUTDIR/homeBackup-$DATE.tgz \
-    --exclude=luke/"Ubuntu One" \
+    --exclude=luke/archive \
     --exclude=luke/Music \
     --exclude=luke/Downloads \
     --exclude=luke/Dropbox \
     --exclude=luke/.local/share/Trash \
     --exclude=luke/Documents \
     --exclude=luke/SAS \
+    --exclude=luke/bin \
+    --exclude="luke/My Games" \
+    --exclude=luke/org \
     --exclude=luke/.PlayOnLinux \
-    --exclude=luke/R \
+    --exclude=luke/R/x86_64* \
     --exclude=luke/.thunderbird/0atvmpgk.default/ImapMail \
+    --exclude=luke/.dropbox-dist \
+    --exclude=luke/.dropbox \
     --exclude=luke/.cache \
     --exclude=luke/.cabal \
     --exclude=luke/.wine \
-    --exclude=luke/.mozilla/firefox/8gv8alpt.default/zotero \
+    --exclude=luke/.mozilla/firefox/izn1unfz.default/zotero \
     luke/
 
 # Delete all backups older than two months (62 days)

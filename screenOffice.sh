@@ -3,8 +3,8 @@
 ## This script refreshes the screens in my office to put turn the
 ## laptop off and fix the resolution size of my monitor
 
-EXT="VGA1"
-IN="LVDS1"
+EXT="DP2"
+IN="eDP1"
 
 if (xrandr | grep "$EXT connected"); then
     xrandr --output $EXT --auto --output $IN --off && xrandr -r 75

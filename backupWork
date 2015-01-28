@@ -17,12 +17,14 @@ tar cvpzf $OUTDIR/workBackup-$DATE.tgz \
     --exclude=bin/anaconda \
     --exclude=bin/jdk \
     --exclude=bin/docear \
+    --exclude=SAS/depot \
     SAS \
     Documents \
-    .emacs.d \
     bin \
     R \
+    org \
     Templates \
+    .myconfig \
     Anki
 
 # Delete all older backups
