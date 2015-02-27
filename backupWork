@@ -10,6 +10,7 @@
 # Script variables
 DATE=$(date +"%F") # The %F stands for YYYY-MM-DD
 OUTDIR=/home/luke/Dropbox/Luke/backups
+BAK_DIR=/home/luke/archive/backups
 
 # Running tar
 cd /home/luke/
@@ -27,6 +28,8 @@ tar cvpzf $OUTDIR/workBackup-$DATE.tgz \
     .myconfig \
     Anki
 
-# Delete all older backups
-find $OUTDIR/workBackup* -mtime +22 -delete
+# Delete all backups older than 8 days
+find $OUTDIR/workBackup* -mtime +8 -delete
+
+cp $OUTDIR/workBackup-$DATE.tgz $BAK_DIR/
 

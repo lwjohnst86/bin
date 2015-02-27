@@ -11,6 +11,7 @@
 # Script variables
 DATE=$(date +"%F") # The %F stands for YYYY-MM-DD
 OUTDIR=/home/luke/Dropbox/Luke/backups
+BAK_DIR=/home/luke/archive/backups
 
 # Running tar
 cd /home/
@@ -36,6 +37,8 @@ tar cvpzf $OUTDIR/homeBackup-$DATE.tgz \
     --exclude=luke/.mozilla/firefox/izn1unfz.default/zotero \
     luke/
 
-# Delete all backups older than two months (62 days)
-find $OUTDIR/homeBackup* -mtime +62 -delete
+# Delete all backups older than 1 month
+find $OUTDIR/homeBackup* -mtime +31 -delete
+
+cp $OUTDIR/homeBackup-$DATE.tgz $BAK_DIR/
 
