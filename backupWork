@@ -17,9 +17,10 @@ cd /home/luke/
 tar cvpzf $OUTDIR/workBackup-$DATE.tgz \
     --exclude=bin/anaconda \
     --exclude=bin/jdk \
+    --exclude=bin/VUE \
     --exclude=bin/docear \
     --exclude=SAS/depot \
-    SAS \
+    --exclude=R/x86_64-pc-linux-gnu-library \
     Documents \
     bin \
     R \
