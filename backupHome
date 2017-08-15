@@ -16,11 +16,16 @@ BAK_DIR=/home/luke/archive/backups
 # Running tar
 cd /home/
 tar cvpzf $OUTDIR/homeBackup-$DATE.tgz \
+    --exclude=luke/.gem \
+    --exclude=luke/.TelegramDesktop \
+    --exclude=luke/.misc \
+    --exclude=luke/.mozilla/firefox/iznlunfz.default/storage \
+    --exclude="luke/Larian Studios" \
     --exclude=luke/archive \
     --exclude=luke/Music \
     --exclude=luke/Downloads \
     --exclude=luke/Dropbox \
-    --exclude=luke/.local/share/Trash \
+    --exclude=luke/.local/share \
     --exclude=luke/Documents \
     --exclude=luke/SAS \
     --exclude=luke/bin \
@@ -29,12 +34,14 @@ tar cvpzf $OUTDIR/homeBackup-$DATE.tgz \
     --exclude=luke/.PlayOnLinux \
     --exclude=luke/R/x86_64* \
     --exclude=luke/.thunderbird/0atvmpgk.default/ImapMail \
+    --exclude=luke/.thunderbird/0atvmpgk.default/extensions/{e2fda* \
     --exclude=luke/.dropbox-dist \
     --exclude=luke/.dropbox \
     --exclude=luke/.cache \
     --exclude=luke/.cabal \
+    --exclude=luke/.config/packrat \
+    --exclude=luke/.TelegramDesktop/tdata \
     --exclude=luke/.wine \
-    --exclude=luke/.mozilla/firefox/izn1unfz.default/zotero \
     luke/
 
 # Delete all backups older than 1 month
