@@ -5,8 +5,8 @@
 
 ARCHIVE_LOCAL=/home/luke/archive/archive/
 BACKUPS_LOCAL=/home/luke/archive/backups/
-ARCHIVE_EXTERNAL="/media/luke/FreeAgent GoFlex Drive/archive/"
-BACKUPS_EXTERNAL="/media/luke/FreeAgent GoFlex Drive/backup/home/"
+ARCHIVE_EXTERNAL="/media/luke/FreeAgent GoFlex Drive1/archive/"
+BACKUPS_EXTERNAL="/media/luke/FreeAgent GoFlex Drive1/backup/home/"
 
 rsync -avu $ARCHIVE_LOCAL "$ARCHIVE_EXTERNAL"
 rsync -avu $BACKUPS_LOCAL "$BACKUPS_EXTERNAL"
