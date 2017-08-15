@@ -15,6 +15,7 @@ gs -sDEVICE=pdfwrite \
     -dNOPAUSE \
     -dQUIET \
     -dBATCH \
+    -dCompressFonts=true \
     -sOutputFile=$dir/$outname $dir/$filename
 
 #rm $dir/$(basename "$1")
