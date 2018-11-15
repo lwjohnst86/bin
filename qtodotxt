@@ -1,3 +1,2 @@
-#!/bin/sh
-
-/home/luke/bin/QTodoTxt-1.9.0/bin/qtodotxt
+#!/usr/bin/env bash
+python3 -c "import qtodotxt.app as app; app.run()"
