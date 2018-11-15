@@ -1,2 +1,2 @@
 #!/bin/sh
-java -jar ~/bin/JabRef-4.1.jar
+java -jar ~/bin/JabRef-4.3.1.jar
