@@ -1,8 +1,3 @@
-#!/bin/sh
-ps aux|grep 'emacs *--daemon' || DISPLAY='' emacs --daemon -nw --no-splash
+#!/bin/bash
+emacsclient -a "" -n -c "$@"
 
-if [ "x$1" = "x-nw" ]; then
-  exec emacsclient "$@"
-else
-  exec emacsclient -nc "$@"
-fi
