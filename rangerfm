@@ -2,5 +2,5 @@
 
 # This script runs ranger
 
-#x-terminal-emulator -T Ranger -e ranger
-urxvt -title Ranger -e ranger
+i3-sensible-terminal -e ranger
+
