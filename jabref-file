@@ -1,2 +1,0 @@
-#!/bin/sh
-java -jar ~/bin/JabRef-4.3.1.jar -- $1
