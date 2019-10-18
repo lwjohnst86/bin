@@ -16,19 +16,8 @@ BAK_DIR=/home/luke/archive/backups
 cd /home/luke/
 tar cvpzf $OUTDIR/workBackup-$DATE.tgz \
     --exclude=Documents/bibliography/styles \
-    --exclude=bin/anaconda \
-    --exclude=bin/jdk \
-    --exclude=bin/VUE \
-    --exclude=bin/docear \
-    --exclude=SAS/depot \
-    --exclude="Documents/my games" \
-    --exclude=R/x86_64-pc-linux-gnu-library \
-    Documents \
-    bin \
-    R \
-    org \
-    Templates \
-    .myconfig
+    Documents
+
 
 # Delete all backups older than 8 days
 find $OUTDIR/workBackup* -mtime +8 -delete
