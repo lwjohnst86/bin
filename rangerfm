@@ -1,6 +1,0 @@
-#!/bin/sh
-
-# This script runs ranger
-
-i3-sensible-terminal -e ranger
-
