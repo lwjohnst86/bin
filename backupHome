@@ -25,6 +25,7 @@ tar cvpzf $OUTDIR/homeBackup-$DATE.tgz \
     --exclude=luke/Music \
     --exclude=luke/Downloads \
     --exclude=luke/Dropbox \
+    --exclude=luke/Games \
     --exclude=luke/.local/share \
     --exclude=luke/Documents \
     --exclude=luke/SAS \
